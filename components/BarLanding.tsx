@@ -278,12 +278,27 @@ export default function BarLanding() {
       <div className="vignette" />
 
       {/* HERO */}
-      <section className="relative min-h-screen flex flex-col">
+      <section className="relative min-h-screen flex flex-col overflow-hidden">
+        {/* Background video */}
+        <video
+          className="hero-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          poster="/hero/hero-poster.jpg"
+          aria-hidden="true"
+        >
+          <source src="/hero/hero.mp4" type="video/mp4" />
+        </video>
+        <div className="hero-video-overlay" />
+
         <div className="ambient-glow" style={{ top: '-200px', left: '-200px' }} />
         <div className="ambient-glow" style={{ bottom: '-300px', right: '-200px', background: 'radial-gradient(circle, rgba(212,184,150,0.1) 0%, transparent 60%)' }} />
 
         <div className="relative z-10 px-4 sm:px-6 pt-6 sm:pt-8 flex items-center justify-between gap-3 fade-up">
-          <div className="font-display text-base sm:text-xl tracking-[0.25em] sm:tracking-[0.3em] text-[#ae95b6] whitespace-nowrap">M · 317</div>
+          <div className="font-display text-base sm:text-xl tracking-[0.25em] sm:tracking-[0.3em] text-[#ae95b6] whitespace-nowrap" style={{ textShadow: '0 2px 12px rgba(13,11,13,0.8)' }}>M · 317</div>
           <div className="lamp-frame">
             <span className={`lamp ${isOpen ? 'on' : ''}`} />
             <span className="font-jp text-[10px] sm:text-xs tracking-[0.25em] sm:tracking-[0.3em] text-[#ece1d8] whitespace-nowrap">
@@ -293,15 +308,15 @@ export default function BarLanding() {
         </div>
 
         <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-6 text-center py-12">
-          <div className="font-serif-l italic text-[#9d85a6] text-xs sm:text-sm tracking-[0.3em] sm:tracking-[0.4em] mb-4 sm:mb-6 fade-up-2 px-2">
+          <div className="font-serif-l italic text-[#c9b3d2] text-xs sm:text-sm tracking-[0.3em] sm:tracking-[0.4em] mb-4 sm:mb-6 fade-up-2 px-2" style={{ textShadow: '0 2px 16px rgba(13,11,13,0.9)' }}>
             — a quiet bar for solitary nights —
           </div>
           <h1 className="hero-title fade-up-3">MAUVE</h1>
-          <div className="font-jp text-xs sm:text-sm tracking-[0.4em] sm:tracking-[0.5em] text-[#ae95b6] mt-5 sm:mt-6 fade-up-4">
+          <div className="font-jp text-xs sm:text-sm tracking-[0.4em] sm:tracking-[0.5em] text-[#d4c0dc] mt-5 sm:mt-6 fade-up-4" style={{ textShadow: '0 2px 16px rgba(13,11,13,0.9)' }}>
             深 夜 の 音 律 と 一 杯
           </div>
           <div className="mt-10 sm:mt-12 max-w-md fade-up-5">
-            <p className="font-jp text-xs sm:text-sm leading-loose text-[#9d8ea6]">
+            <p className="font-jp text-xs sm:text-sm leading-loose text-[#c0b0c8]" style={{ textShadow: '0 2px 14px rgba(13,11,13,0.9)' }}>
               扉の向こうに、ひとりの夜。<br/>
               誰にも気を遣わず、自分のための音と酒を。
             </p>
@@ -309,8 +324,8 @@ export default function BarLanding() {
         </div>
 
         <div className="relative z-10 pb-6 sm:pb-8 flex flex-col items-center scroll-hint">
-          <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#7a6184]">SCROLL</div>
-          <div className="w-px h-8 sm:h-10 bg-gradient-to-b from-[#7a6184] to-transparent mt-2" />
+          <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#9d85a6]">SCROLL</div>
+          <div className="w-px h-8 sm:h-10 bg-gradient-to-b from-[#9d85a6] to-transparent mt-2" />
         </div>
       </section>
 
