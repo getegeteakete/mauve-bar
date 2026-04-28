@@ -297,3 +297,50 @@ img, iframe { max-width: 100%; }
   border-left: none;
   border-top: none;
 }
+
+/* Instagram QR frame */
+.qr-frame {
+  position: relative;
+  padding: 16px;
+  background: linear-gradient(180deg, rgba(244,238,245,0.04), rgba(174,149,182,0.06));
+  border: 1px solid rgba(174, 149, 182, 0.25);
+  box-shadow:
+    0 4px 30px rgba(146, 95, 162, 0.15),
+    inset 0 0 30px rgba(146, 95, 162, 0.05);
+}
+.qr-frame::before,
+.qr-frame::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(174, 149, 182, 0.6);
+  pointer-events: none;
+}
+.qr-frame::before {
+  top: -1px; left: -1px;
+  border-right: none;
+  border-bottom: none;
+}
+.qr-frame::after {
+  bottom: -1px; right: -1px;
+  border-left: none;
+  border-top: none;
+}
+.qr-frame-inner {
+  background: #f4eef5;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.qr-canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 200px !important;
+  height: 200px !important;
+}
+@media (min-width: 640px) {
+  .qr-canvas { width: 220px !important; height: 220px !important; }
+}

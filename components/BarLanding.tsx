@@ -1,13 +1,34 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import {
   MapPin, Calendar as CalendarIcon, Instagram, Lock, X, ChevronLeft, ChevronRight, ChevronUp,
   LogIn, LogOut, Settings,
 } from 'lucide-react';
+import QRCode from 'qrcode';
 import { BarData, DEFAULT_DATA } from '@/lib/types';
 
 const POLL_INTERVAL = 30_000; // 30秒ごとに最新ステータスを取得
+
+// Instagram QR component — renders a styled QR code on a canvas
+function InstagramQR({ url }: { url: string }) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    if (!canvasRef.current) return;
+    QRCode.toCanvas(canvasRef.current, url, {
+      width: 220,
+      margin: 1,
+      errorCorrectionLevel: 'H',
+      color: {
+        dark: '#1a121f',
+        light: '#f4eef5',
+      },
+    }).catch((err) => console.error('QR generation failed:', err));
+  }, [url]);
+
+  return <canvas ref={canvasRef} className="qr-canvas" aria-label="Instagram QR code" />;
+}
 
 // Haversine distance in meters
 function haversine(lat1: number, lon1: number, lat2: number, lon2: number): number {
@@ -561,12 +582,45 @@ export default function BarLanding() {
           <div>
             <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#7a6184] mb-2 sm:mb-3">CONTACT</div>
             <a
-              href={`tel:${data.config.phone.replace(/[^0-9+]/g, '')}`}
-              className="text-[#ece1d8] tracking-wider hover:text-[#ae95b6] transition text-sm sm:text-base"
+              href="https://www.instagram.com/mauve.317/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#ece1d8] tracking-wider hover:text-[#ae95b6] transition text-sm sm:text-base inline-flex items-center gap-2"
             >
-              {data.config.phone}
+              <Instagram size={14} />
+              @mauve.317
             </a>
-            <div className="text-[#7a6184] text-[11px] sm:text-xs mt-2">予約不要 · ご来店優先</div>
+            <div className="text-[#7a6184] text-[11px] sm:text-xs mt-2 leading-relaxed">DMにてお気軽にお問い合わせください</div>
+          </div>
+        </div>
+
+        {/* INSTAGRAM QR */}
+        <div className="mt-12 sm:mt-16">
+          <div className="text-center mb-6 sm:mb-8">
+            <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#7a6184] mb-2">FOLLOW</div>
+            <div className="font-jp text-base sm:text-lg tracking-[0.2em] text-[#ece1d8]">Instagram</div>
+          </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+            <div className="qr-frame">
+              <div className="qr-frame-inner">
+                <InstagramQR url="https://www.instagram.com/mauve.317/" />
+              </div>
+            </div>
+            <div className="text-center sm:text-left">
+              <div className="font-serif-l italic text-[#c9b3d2] text-base sm:text-lg mb-2">@mauve.317</div>
+              <div className="font-jp text-xs text-[#9d8ea6] leading-relaxed mb-4 max-w-[240px]">
+                スマートフォンのカメラで<br/>QRコードを読み取ってください
+              </div>
+              <a
+                href="https://www.instagram.com/mauve.317/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 btn-line"
+              >
+                <Instagram size={14} />
+                <span>OPEN INSTAGRAM</span>
+              </a>
+            </div>
           </div>
         </div>
 
