@@ -463,10 +463,8 @@ export default function BarLanding() {
         </div>
 
         <div className="text-center mt-10 sm:mt-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 border border-[#3a2c40] bg-[#1a121f]/40 backdrop-blur-sm">
-            <span className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#ae95b6]">SMOKING</span>
-            <span className="text-[#5e4569] text-[10px] sm:text-xs">·</span>
-            <span className="font-display text-[10px] sm:text-xs tracking-[0.3em] text-[#ae95b6]">OK</span>
+          <div className="inline-flex items-center px-4 py-2 border border-[#3a2c40] bg-[#1a121f]/40 backdrop-blur-sm">
+            <span className="font-serif-l italic text-[#ae95b6] text-sm sm:text-base tracking-[0.1em]">Smoking Ok</span>
           </div>
         </div>
       </section>
