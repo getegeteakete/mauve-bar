@@ -446,6 +446,10 @@ export default function BarLanding() {
           <div className="space-y-1">
             {[
               ['Brandy', '', ''],
+              ['Whisky', '', ''],
+              ['Gin', '', ''],
+              ['Rum', '', ''],
+              ['Vodka', '', ''],
               ['Wine (Bottle)', '', '¥5,000〜'],
               ['Champagne', '', '¥11,000〜'],
             ].map((row, i) => (
