@@ -266,7 +266,7 @@ export default function BarLanding() {
 
   if (!loaded) {
     return (
-      <div className="min-h-screen flex items-center justify-center text-[#c8a2b8]">
+      <div className="min-h-screen flex items-center justify-center text-[#ae95b6]">
         <div className="font-serif-l italic tracking-widest text-sm opacity-60">opening…</div>
       </div>
     );
@@ -283,7 +283,7 @@ export default function BarLanding() {
         <div className="ambient-glow" style={{ bottom: '-300px', right: '-200px', background: 'radial-gradient(circle, rgba(212,184,150,0.1) 0%, transparent 60%)' }} />
 
         <div className="relative z-10 px-4 sm:px-6 pt-6 sm:pt-8 flex items-center justify-between gap-3 fade-up">
-          <div className="font-display text-base sm:text-xl tracking-[0.25em] sm:tracking-[0.3em] text-[#c8a2b8] whitespace-nowrap">M · 317</div>
+          <div className="font-display text-base sm:text-xl tracking-[0.25em] sm:tracking-[0.3em] text-[#ae95b6] whitespace-nowrap">M · 317</div>
           <div className="lamp-frame">
             <span className={`lamp ${isOpen ? 'on' : ''}`} />
             <span className="font-jp text-[10px] sm:text-xs tracking-[0.25em] sm:tracking-[0.3em] text-[#ece1d8] whitespace-nowrap">
@@ -293,15 +293,15 @@ export default function BarLanding() {
         </div>
 
         <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-6 text-center py-12">
-          <div className="font-serif-l italic text-[#a78695] text-xs sm:text-sm tracking-[0.3em] sm:tracking-[0.4em] mb-4 sm:mb-6 fade-up-2 px-2">
+          <div className="font-serif-l italic text-[#9d85a6] text-xs sm:text-sm tracking-[0.3em] sm:tracking-[0.4em] mb-4 sm:mb-6 fade-up-2 px-2">
             — a quiet bar for solitary nights —
           </div>
           <h1 className="hero-title fade-up-3">MAUVE</h1>
-          <div className="font-jp text-xs sm:text-sm tracking-[0.4em] sm:tracking-[0.5em] text-[#c8a2b8] mt-5 sm:mt-6 fade-up-4">
+          <div className="font-jp text-xs sm:text-sm tracking-[0.4em] sm:tracking-[0.5em] text-[#ae95b6] mt-5 sm:mt-6 fade-up-4">
             深 夜 の 音 律 と 一 杯
           </div>
           <div className="mt-10 sm:mt-12 max-w-md fade-up-5">
-            <p className="font-jp text-xs sm:text-sm leading-loose text-[#9b8a91]">
+            <p className="font-jp text-xs sm:text-sm leading-loose text-[#9d8ea6]">
               扉の向こうに、ひとりの夜。<br/>
               誰にも気を遣わず、自分のための音と酒を。
             </p>
@@ -309,8 +309,8 @@ export default function BarLanding() {
         </div>
 
         <div className="relative z-10 pb-6 sm:pb-8 flex flex-col items-center scroll-hint">
-          <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#8a6a78]">SCROLL</div>
-          <div className="w-px h-8 sm:h-10 bg-gradient-to-b from-[#8a6a78] to-transparent mt-2" />
+          <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#7a6184]">SCROLL</div>
+          <div className="w-px h-8 sm:h-10 bg-gradient-to-b from-[#7a6184] to-transparent mt-2" />
         </div>
       </section>
 
@@ -323,10 +323,10 @@ export default function BarLanding() {
         </div>
 
         <div className="text-center mb-14 sm:mb-20">
-          <div className="font-display text-xs sm:text-sm tracking-[0.4em] sm:tracking-[0.5em] text-[#8a6a78] mb-3 sm:mb-4">CONCEPT</div>
+          <div className="font-display text-xs sm:text-sm tracking-[0.4em] sm:tracking-[0.5em] text-[#7a6184] mb-3 sm:mb-4">CONCEPT</div>
           <h2 className="font-jp text-xl sm:text-2xl md:text-3xl tracking-[0.15em] sm:tracking-[0.2em] text-[#ece1d8] leading-relaxed">
             ひとりで、深く。<br/>
-            <span className="font-serif-l italic text-[#c8a2b8] text-lg sm:text-2xl md:text-3xl">In quiet company of music & spirits.</span>
+            <span className="font-serif-l italic text-[#ae95b6] text-lg sm:text-2xl md:text-3xl">In quiet company of music & spirits.</span>
           </h2>
         </div>
 
@@ -337,9 +337,9 @@ export default function BarLanding() {
             { jp: '独', en: 'Solitude', desc: 'カウンターは八席。連れ立つ夜より、ひとりの夜に。静けさが似合う場所。' },
           ].map((c, i) => (
             <div key={i} className="text-center">
-              <div className="font-jp text-4xl sm:text-5xl text-[#c8a2b8] mb-2 sm:mb-3">{c.jp}</div>
-              <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#8a6a78] mb-3 sm:mb-4">{c.en}</div>
-              <p className="font-jp text-xs sm:text-sm leading-loose text-[#9b8a91] max-w-[260px] mx-auto">{c.desc}</p>
+              <div className="font-jp text-4xl sm:text-5xl text-[#ae95b6] mb-2 sm:mb-3">{c.jp}</div>
+              <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#7a6184] mb-3 sm:mb-4">{c.en}</div>
+              <p className="font-jp text-xs sm:text-sm leading-loose text-[#9d8ea6] max-w-[260px] mx-auto">{c.desc}</p>
             </div>
           ))}
         </div>
@@ -364,15 +364,15 @@ export default function BarLanding() {
             <div key={i} className="menu-row">
               <div className="min-w-0 flex-shrink">
                 <div className="font-serif-l text-base sm:text-lg text-[#ece1d8] leading-tight">{row[0]}</div>
-                <div className="font-jp text-[11px] sm:text-xs text-[#8a6a78] mt-1 tracking-wider leading-snug">{row[1]}</div>
+                <div className="font-jp text-[11px] sm:text-xs text-[#7a6184] mt-1 tracking-wider leading-snug">{row[1]}</div>
               </div>
               <div className="leader hidden sm:block" />
-              <div className="font-serif-l italic text-[#c8a2b8] text-sm sm:text-base whitespace-nowrap flex-shrink-0">{row[2]}</div>
+              <div className="font-serif-l italic text-[#ae95b6] text-sm sm:text-base whitespace-nowrap flex-shrink-0">{row[2]}</div>
             </div>
           ))}
         </div>
         <div className="text-center mt-8 sm:mt-10">
-          <div className="font-jp text-[11px] sm:text-xs text-[#8a6a78] tracking-[0.3em]">— more on the night —</div>
+          <div className="font-jp text-[11px] sm:text-xs text-[#7a6184] tracking-[0.3em]">— more on the night —</div>
         </div>
       </section>
 
@@ -380,12 +380,12 @@ export default function BarLanding() {
       <section className="relative z-10 px-4 sm:px-6 py-14 sm:py-20 max-w-3xl mx-auto">
         <div className="divider-glyph mb-10 sm:mb-12">
           <span className="ornament-line max-w-[60px] sm:max-w-[80px]" />
-          <CalendarIcon size={16} className="text-[#8a6a78]" />
+          <CalendarIcon size={16} className="text-[#7a6184]" />
           <span className="ornament-line max-w-[60px] sm:max-w-[80px]" />
         </div>
 
         <div className="text-center mb-8 sm:mb-10">
-          <div className="font-display text-xs sm:text-sm tracking-[0.4em] sm:tracking-[0.5em] text-[#8a6a78] mb-2 sm:mb-3">CALENDAR</div>
+          <div className="font-display text-xs sm:text-sm tracking-[0.4em] sm:tracking-[0.5em] text-[#7a6184] mb-2 sm:mb-3">CALENDAR</div>
           <h2 className="font-jp text-xl sm:text-2xl tracking-[0.2em] text-[#ece1d8]">営 業 日</h2>
         </div>
 
@@ -395,7 +395,7 @@ export default function BarLanding() {
               const d = new Date(calCursor.y, calCursor.m - 1, 1);
               setCalCursor({ y: d.getFullYear(), m: d.getMonth() });
             }}
-            className="text-[#8a6a78] hover:text-[#c8a2b8] transition p-2 -m-2"
+            className="text-[#7a6184] hover:text-[#ae95b6] transition p-2 -m-2"
             aria-label="前月"
           >
             <ChevronLeft size={20} />
@@ -404,14 +404,14 @@ export default function BarLanding() {
             <div className="font-display text-xl sm:text-2xl tracking-[0.2em] text-[#ece1d8]">
               {calCursor.y} · {String(calCursor.m + 1).padStart(2, '0')}
             </div>
-            <div className="font-jp text-[10px] sm:text-xs text-[#8a6a78] tracking-[0.3em] sm:tracking-[0.4em] mt-1">{MONTH_LABELS[calCursor.m]}</div>
+            <div className="font-jp text-[10px] sm:text-xs text-[#7a6184] tracking-[0.3em] sm:tracking-[0.4em] mt-1">{MONTH_LABELS[calCursor.m]}</div>
           </div>
           <button
             onClick={() => {
               const d = new Date(calCursor.y, calCursor.m + 1, 1);
               setCalCursor({ y: d.getFullYear(), m: d.getMonth() });
             }}
-            className="text-[#8a6a78] hover:text-[#c8a2b8] transition p-2 -m-2"
+            className="text-[#7a6184] hover:text-[#ae95b6] transition p-2 -m-2"
             aria-label="次月"
           >
             <ChevronRight size={20} />
@@ -420,7 +420,7 @@ export default function BarLanding() {
 
         <div className="grid grid-cols-7 mb-2">
           {WEEKDAYS.map((w, i) => (
-            <div key={w} className={`text-center font-jp text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] py-2 ${i === 5 ? 'text-[#7d8aa8]' : i === 6 ? 'text-[#c87878]' : 'text-[#8a6a78]'}`}>
+            <div key={w} className={`text-center font-jp text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] py-2 ${i === 5 ? 'text-[#8aa0c4]' : i === 6 ? 'text-[#b8788e]' : 'text-[#7a6184]'}`}>
               {w}
             </div>
           ))}
@@ -442,9 +442,9 @@ export default function BarLanding() {
           })}
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-6 sm:mt-8 font-jp text-[11px] sm:text-xs text-[#9b8a91]">
-          <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-[#c8a2b8]" /> 営業日</span>
-          <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-[#2a2228]" /> 定休日</span>
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-6 sm:mt-8 font-jp text-[11px] sm:text-xs text-[#9d8ea6]">
+          <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-[#ae95b6]" /> 営業日</span>
+          <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-[#2b242d]" /> 定休日</span>
           <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-[#d4b896] shadow-[0_0_6px_rgba(212,184,150,0.6)]" /> 特別営業</span>
         </div>
       </section>
@@ -459,40 +459,40 @@ export default function BarLanding() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 font-jp text-sm">
           <div>
-            <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#8a6a78] mb-2 sm:mb-3">HOURS</div>
+            <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#7a6184] mb-2 sm:mb-3">HOURS</div>
             <div className="text-[#ece1d8] text-base tracking-wider">{data.config.hours}</div>
-            <div className="text-[#8a6a78] text-[11px] sm:text-xs mt-2">L.O. 30分前 · 定休 日曜</div>
-            <div className="text-[#8a6a78] text-[11px] sm:text-xs mt-1 leading-relaxed">店主在店中は時間外も灯が点ることがあります</div>
+            <div className="text-[#7a6184] text-[11px] sm:text-xs mt-2">L.O. 30分前 · 定休 日曜</div>
+            <div className="text-[#7a6184] text-[11px] sm:text-xs mt-1 leading-relaxed">店主在店中は時間外も灯が点ることがあります</div>
           </div>
           <div>
-            <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#8a6a78] mb-2 sm:mb-3">CHARGE</div>
+            <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#7a6184] mb-2 sm:mb-3">CHARGE</div>
             <div className="text-[#ece1d8] text-base tracking-wider">{data.config.cover}</div>
-            <div className="text-[#8a6a78] text-[11px] sm:text-xs mt-2">お通し付 · お一人様歓迎</div>
+            <div className="text-[#7a6184] text-[11px] sm:text-xs mt-2">お通し付 · お一人様歓迎</div>
           </div>
           <div>
-            <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#8a6a78] mb-2 sm:mb-3">ADDRESS</div>
+            <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#7a6184] mb-2 sm:mb-3">ADDRESS</div>
             <div className="text-[#ece1d8] tracking-wider text-sm sm:text-base">{data.config.address}</div>
-            <div className="text-[#8a6a78] text-[11px] sm:text-xs mt-2 leading-relaxed">{data.config.nearestStation}</div>
+            <div className="text-[#7a6184] text-[11px] sm:text-xs mt-2 leading-relaxed">{data.config.nearestStation}</div>
             {data.config.locationLat != null && data.config.locationLng != null && (
               <a
                 href={`https://www.google.com/maps/search/?api=1&query=${data.config.locationLat},${data.config.locationLng}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-3 text-[#c8a2b8] hover:text-[#f0d8e0] transition text-[10px] sm:text-xs font-display tracking-[0.3em] border-b border-[#c8a2b8]/40 hover:border-[#c8a2b8] pb-0.5"
+                className="inline-block mt-3 text-[#ae95b6] hover:text-[#e2dde3] transition text-[10px] sm:text-xs font-display tracking-[0.3em] border-b border-[#ae95b6]/40 hover:border-[#ae95b6] pb-0.5"
               >
                 OPEN IN MAPS →
               </a>
             )}
           </div>
           <div>
-            <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#8a6a78] mb-2 sm:mb-3">CONTACT</div>
+            <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#7a6184] mb-2 sm:mb-3">CONTACT</div>
             <a
               href={`tel:${data.config.phone.replace(/[^0-9+]/g, '')}`}
-              className="text-[#ece1d8] tracking-wider hover:text-[#c8a2b8] transition text-sm sm:text-base"
+              className="text-[#ece1d8] tracking-wider hover:text-[#ae95b6] transition text-sm sm:text-base"
             >
               {data.config.phone}
             </a>
-            <div className="text-[#8a6a78] text-[11px] sm:text-xs mt-2">予約不要 · ご来店優先</div>
+            <div className="text-[#7a6184] text-[11px] sm:text-xs mt-2">予約不要 · ご来店優先</div>
           </div>
         </div>
 
@@ -516,30 +516,30 @@ export default function BarLanding() {
       </section>
 
       {/* FOOTER */}
-      <footer className="relative z-10 px-4 sm:px-6 py-12 sm:py-16 border-t border-[#2a1f25]">
+      <footer className="relative z-10 px-4 sm:px-6 py-12 sm:py-16 border-t border-[#2b242d]">
         <div className="max-w-3xl mx-auto flex flex-col items-center text-center gap-5 sm:gap-6">
-          <div className="font-display text-2xl sm:text-3xl tracking-[0.25em] sm:tracking-[0.3em] text-[#c8a2b8]">MAUVE</div>
-          <div className="font-jp text-[11px] sm:text-xs text-[#8a6a78] tracking-[0.25em] sm:tracking-[0.3em]">
+          <div className="font-display text-2xl sm:text-3xl tracking-[0.25em] sm:tracking-[0.3em] text-[#ae95b6]">MAUVE</div>
+          <div className="font-jp text-[11px] sm:text-xs text-[#7a6184] tracking-[0.25em] sm:tracking-[0.3em]">
             ひとりの夜に、寄り添う場所を。
           </div>
           <a
             href="https://www.instagram.com/mauve.317/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-[#9b8a91] hover:text-[#c8a2b8] transition"
+            className="flex items-center gap-2 text-[#9d8ea6] hover:text-[#ae95b6] transition"
           >
             <Instagram size={16} />
             <span className="font-serif-l italic text-sm">@mauve.317</span>
           </a>
           <button
             onClick={() => setAdminOpen(true)}
-            className="mt-3 sm:mt-4 text-[#3a2f35] hover:text-[#8a6a78] transition text-xs flex items-center gap-1"
+            className="mt-3 sm:mt-4 text-[#3a2c40] hover:text-[#7a6184] transition text-xs flex items-center gap-1"
             aria-label="店主メニュー"
           >
             <Settings size={12} />
             <span className="font-display tracking-[0.3em]">staff</span>
           </button>
-          <div className="font-display text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] text-[#3a2f35] mt-3 sm:mt-4 px-4">
+          <div className="font-display text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] text-[#3a2c40] mt-3 sm:mt-4 px-4">
             © {now.getFullYear()} MAUVE · ALL NIGHTS RESERVED
           </div>
         </div>
@@ -563,15 +563,15 @@ export default function BarLanding() {
       {/* ADMIN */}
       {adminOpen && (
         <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-end md:items-center justify-center p-0 md:p-6">
-          <div className="bg-[#15101380] border-t md:border border-[#3a2f35] backdrop-blur-xl w-full md:max-w-2xl max-h-[90vh] overflow-y-auto rounded-t-lg md:rounded-lg">
-            <div className="p-6 border-b border-[#2a1f25] flex items-center justify-between sticky top-0 bg-[#15101380] backdrop-blur-xl">
+          <div className="bg-[#1a121f80] border-t md:border border-[#3a2c40] backdrop-blur-xl w-full md:max-w-2xl max-h-[90vh] overflow-y-auto rounded-t-lg md:rounded-lg">
+            <div className="p-6 border-b border-[#2b242d] flex items-center justify-between sticky top-0 bg-[#1a121f80] backdrop-blur-xl">
               <div>
-                <div className="font-display text-sm tracking-[0.4em] text-[#8a6a78]">STAFF</div>
+                <div className="font-display text-sm tracking-[0.4em] text-[#7a6184]">STAFF</div>
                 <div className="font-jp text-lg text-[#ece1d8]">店主メニュー</div>
               </div>
               <button
                 onClick={() => { setAdminOpen(false); setUnlocked(false); setSavedPin(null); setLocationMsg(''); }}
-                className="text-[#8a6a78] hover:text-[#c8a2b8]"
+                className="text-[#7a6184] hover:text-[#ae95b6]"
               >
                 <X size={20} />
               </button>
@@ -580,8 +580,8 @@ export default function BarLanding() {
             <div className="p-6">
               {!unlocked ? (
                 <div className="text-center py-8">
-                  <Lock className="mx-auto text-[#8a6a78] mb-4" size={28} />
-                  <div className="font-jp text-sm text-[#9b8a91] mb-6 tracking-wider">
+                  <Lock className="mx-auto text-[#7a6184] mb-4" size={28} />
+                  <div className="font-jp text-sm text-[#9d8ea6] mb-6 tracking-wider">
                     暗証番号を入力してください
                   </div>
                   <input
@@ -590,14 +590,14 @@ export default function BarLanding() {
                     value={pinInput}
                     onChange={(e) => setPinInput(e.target.value)}
                     onKeyDown={(e) => e.key === 'Enter' && tryUnlock()}
-                    className={`field max-w-[200px] mx-auto text-center text-2xl tracking-[0.5em] ${pinError ? 'pin-shake border-[#c87878]' : ''}`}
+                    className={`field max-w-[200px] mx-auto text-center text-2xl tracking-[0.5em] ${pinError ? 'pin-shake border-[#b8788e]' : ''}`}
                     placeholder="• • • •"
                     autoFocus
                   />
                   <div className="mt-6">
                     <button onClick={tryUnlock} className="btn-filled">UNLOCK</button>
                   </div>
-                  <div className="text-[#3a2f35] text-xs mt-6 font-display tracking-[0.3em]">
+                  <div className="text-[#3a2c40] text-xs mt-6 font-display tracking-[0.3em]">
                     Vercel の環境変数 BAR_PIN
                   </div>
                 </div>
@@ -605,10 +605,10 @@ export default function BarLanding() {
                 <div className="space-y-8">
                   {/* Open / Close */}
                   <div>
-                    <div className="font-display text-xs tracking-[0.4em] text-[#8a6a78] mb-3">
+                    <div className="font-display text-xs tracking-[0.4em] text-[#7a6184] mb-3">
                       OPENING — 営 業 制 御
                     </div>
-                    <div className="bg-[#0d0a0d] border border-[#2a1f25] p-4 mb-3">
+                    <div className="bg-[#0d0b0d] border border-[#2b242d] p-4 mb-3">
                       <div className="flex items-center gap-3 mb-3">
                         <span className={`lamp ${isOpen ? 'on' : ''}`} style={{ width: 12, height: 12 }} />
                         <span className="font-jp text-sm text-[#ece1d8]">
@@ -616,7 +616,7 @@ export default function BarLanding() {
                         </span>
                       </div>
                       {data.status.lastUpdate && (
-                        <div className="text-[#8a6a78] text-xs font-jp">
+                        <div className="text-[#7a6184] text-xs font-jp">
                           最終更新: {new Date(data.status.lastUpdate).toLocaleString('ja-JP')}
                           {data.status.lastDistance != null && ` · ${data.status.lastDistance}m`}
                         </div>
@@ -648,19 +648,19 @@ export default function BarLanding() {
                       )}
                     </div>
                     {locationMsg && (
-                      <div className="mt-3 font-jp text-xs text-[#c8a2b8]">{locationMsg}</div>
+                      <div className="mt-3 font-jp text-xs text-[#ae95b6]">{locationMsg}</div>
                     )}
                   </div>
 
                   {/* Location setup */}
                   <div>
-                    <div className="font-display text-xs tracking-[0.4em] text-[#8a6a78] mb-3">
+                    <div className="font-display text-xs tracking-[0.4em] text-[#7a6184] mb-3">
                       LOCATION — 店 舗 座 標
                     </div>
-                    <div className="bg-[#0d0a0d] border border-[#2a1f25] p-4 space-y-3">
+                    <div className="bg-[#0d0b0d] border border-[#2b242d] p-4 space-y-3">
                       <div className="grid grid-cols-2 gap-3">
                         <div>
-                          <label className="font-jp text-xs text-[#8a6a78] mb-1 block">緯度</label>
+                          <label className="font-jp text-xs text-[#7a6184] mb-1 block">緯度</label>
                           <input
                             type="number"
                             step="0.000001"
@@ -671,7 +671,7 @@ export default function BarLanding() {
                           />
                         </div>
                         <div>
-                          <label className="font-jp text-xs text-[#8a6a78] mb-1 block">経度</label>
+                          <label className="font-jp text-xs text-[#7a6184] mb-1 block">経度</label>
                           <input
                             type="number"
                             step="0.000001"
@@ -683,7 +683,7 @@ export default function BarLanding() {
                         </div>
                       </div>
                       <div>
-                        <label className="font-jp text-xs text-[#8a6a78] mb-1 block">判定半径 (m)</label>
+                        <label className="font-jp text-xs text-[#7a6184] mb-1 block">判定半径 (m)</label>
                         <input
                           type="number"
                           value={data.config.radius}
@@ -699,11 +699,11 @@ export default function BarLanding() {
 
                   {/* Calendar overrides */}
                   <div>
-                    <div className="font-display text-xs tracking-[0.4em] text-[#8a6a78] mb-3">
+                    <div className="font-display text-xs tracking-[0.4em] text-[#7a6184] mb-3">
                       CALENDAR — 営 業 日 編 集
                     </div>
-                    <div className="bg-[#0d0a0d] border border-[#2a1f25] p-4">
-                      <div className="font-jp text-xs text-[#9b8a91] mb-3">
+                    <div className="bg-[#0d0b0d] border border-[#2b242d] p-4">
+                      <div className="font-jp text-xs text-[#9d8ea6] mb-3">
                         日付をタップして 営業 → 休業 → 特別営業 → 自動 を切替
                       </div>
                       <div className="flex items-center justify-between mb-3">
@@ -712,17 +712,17 @@ export default function BarLanding() {
                             const d = new Date(calCursor.y, calCursor.m - 1, 1);
                             setCalCursor({ y: d.getFullYear(), m: d.getMonth() });
                           }}
-                          className="text-[#8a6a78]"
+                          className="text-[#7a6184]"
                         >
                           <ChevronLeft size={16} />
                         </button>
-                        <span className="font-display text-sm text-[#c8a2b8]">{calCursor.y} · {String(calCursor.m + 1).padStart(2, '0')}</span>
+                        <span className="font-display text-sm text-[#ae95b6]">{calCursor.y} · {String(calCursor.m + 1).padStart(2, '0')}</span>
                         <button
                           onClick={() => {
                             const d = new Date(calCursor.y, calCursor.m + 1, 1);
                             setCalCursor({ y: d.getFullYear(), m: d.getMonth() });
                           }}
-                          className="text-[#8a6a78]"
+                          className="text-[#7a6184]"
                         >
                           <ChevronRight size={16} />
                         </button>
@@ -740,7 +740,7 @@ export default function BarLanding() {
                                 const next = state === 'open' ? 'closed' : state === 'closed' ? 'special' : 'auto';
                                 setCalendarDay(k, next);
                               }}
-                              className={`cal-cell ${state} text-xs hover:border-[#c8a2b8]`}
+                              className={`cal-cell ${state} text-xs hover:border-[#ae95b6]`}
                               style={{ minHeight: 40 }}
                             >
                               <span>{d}</span>
@@ -754,30 +754,30 @@ export default function BarLanding() {
 
                   {/* Shop info */}
                   <div>
-                    <div className="font-display text-xs tracking-[0.4em] text-[#8a6a78] mb-3">
+                    <div className="font-display text-xs tracking-[0.4em] text-[#7a6184] mb-3">
                       INFORMATION — 店 舗 情 報
                     </div>
-                    <div className="bg-[#0d0a0d] border border-[#2a1f25] p-4 space-y-3">
+                    <div className="bg-[#0d0b0d] border border-[#2b242d] p-4 space-y-3">
                       <div>
-                        <label className="font-jp text-xs text-[#8a6a78] mb-1 block">住所</label>
+                        <label className="font-jp text-xs text-[#7a6184] mb-1 block">住所</label>
                         <input value={data.config.address} onChange={(e) => updateConfig({ address: e.target.value })} className="field" />
                       </div>
                       <div>
-                        <label className="font-jp text-xs text-[#8a6a78] mb-1 block">最寄駅 / アクセス</label>
+                        <label className="font-jp text-xs text-[#7a6184] mb-1 block">最寄駅 / アクセス</label>
                         <input value={data.config.nearestStation} onChange={(e) => updateConfig({ nearestStation: e.target.value })} className="field" />
                       </div>
                       <div className="grid grid-cols-2 gap-3">
                         <div>
-                          <label className="font-jp text-xs text-[#8a6a78] mb-1 block">電話</label>
+                          <label className="font-jp text-xs text-[#7a6184] mb-1 block">電話</label>
                           <input value={data.config.phone} onChange={(e) => updateConfig({ phone: e.target.value })} className="field" />
                         </div>
                         <div>
-                          <label className="font-jp text-xs text-[#8a6a78] mb-1 block">営業時間</label>
+                          <label className="font-jp text-xs text-[#7a6184] mb-1 block">営業時間</label>
                           <input value={data.config.hours} onChange={(e) => updateConfig({ hours: e.target.value })} className="field" />
                         </div>
                       </div>
                       <div>
-                        <label className="font-jp text-xs text-[#8a6a78] mb-1 block">チャージ</label>
+                        <label className="font-jp text-xs text-[#7a6184] mb-1 block">チャージ</label>
                         <input value={data.config.cover} onChange={(e) => updateConfig({ cover: e.target.value })} className="field" />
                       </div>
                     </div>
