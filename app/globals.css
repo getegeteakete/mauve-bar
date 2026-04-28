@@ -138,7 +138,7 @@ img, iframe { max-width: 100%; }
      Use clamp() so it has sensible bounds. */
   font-size: clamp(0.7rem, 4vw, 1.5rem);
   letter-spacing: 0.15em;
-  margin-top: -1rem;
+  margin-top: calc(-1rem + 5px);
   white-space: nowrap;
 }
 @media (min-width: 640px) {
