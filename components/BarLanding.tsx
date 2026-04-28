@@ -440,6 +440,7 @@ export default function BarLanding() {
           </div>
           <div className="space-y-1">
             {[
+              ['Brandy', '', ''],
               ['Wine (Bottle)', '', '¥5,000〜'],
               ['Champagne', '', '¥11,000〜'],
             ].map((row, i) => (
@@ -451,7 +452,9 @@ export default function BarLanding() {
                   )}
                 </div>
                 <div className="leader" />
-                <div className="font-serif-l italic text-[#ae95b6] text-sm sm:text-base whitespace-nowrap flex-shrink-0">{row[2]}</div>
+                <div className="font-serif-l italic text-[#ae95b6] text-sm sm:text-base whitespace-nowrap flex-shrink-0">
+                  {row[2] || <span className="text-[#5e4569] text-xs">ASK</span>}
+                </div>
               </div>
             ))}
           </div>
