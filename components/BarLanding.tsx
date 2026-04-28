@@ -396,16 +396,9 @@ export default function BarLanding() {
         {/* Standard menu */}
         <div className="space-y-1">
           {[
-            ['Table Charge', '', '¥500'],
-            ['Beer', '', '¥600'],
-            ['High Ball', '', '¥700'],
-            ['Gin Tonic', '', '¥700'],
-            ['Gin Ricky', '', '¥700'],
-            ['Vodka Tonic', '', '¥700'],
-            ['Vodka Soda', '', '¥700'],
-            ['Cocktails', '', '¥700'],
-            ['Wine (Glass)', '', '¥800'],
-            ['Soft Drink', '', '¥500'],
+            ['High Ball', '', '¥800'],
+            ['Cocktail', '', '¥800'],
+            ['Wine (Glass)', '', '¥1,000'],
           ].map((row, i) => (
             <div key={i} className="menu-row">
               <div className="min-w-0 flex-shrink">
@@ -420,21 +413,15 @@ export default function BarLanding() {
           ))}
         </div>
 
-        {/* Special Others */}
+        {/* Bottle selection */}
         <div className="mt-12 sm:mt-16">
           <div className="font-display text-xs sm:text-sm tracking-[0.4em] text-[#ae95b6] mb-5 sm:mb-6 text-center sm:text-left">
-            SPECIAL OTHERS
+            BOTTLE SELECTION
           </div>
           <div className="space-y-1">
             {[
-              ['Burbon', '', ''],
-              ['Whiskey', '— Scotch · Irish · Islay', ''],
-              ['Rum', '', ''],
-              ['Gin', '', ''],
-              ['Vodka', '', ''],
-              ['Liqueur', '', ''],
-              ['Wine (Bottle)', '', '¥5,000'],
-              ['Champagne', '', '¥8,800'],
+              ['Wine (Bottle)', '', '¥5,000〜'],
+              ['Champagne', '', '¥11,000〜'],
             ].map((row, i) => (
               <div key={i} className="menu-row">
                 <div className="min-w-0 flex-shrink">
@@ -444,9 +431,7 @@ export default function BarLanding() {
                   )}
                 </div>
                 <div className="leader" />
-                <div className="font-serif-l italic text-[#ae95b6] text-sm sm:text-base whitespace-nowrap flex-shrink-0">
-                  {row[2] || <span className="text-[#5e4569] text-xs">ASK</span>}
-                </div>
+                <div className="font-serif-l italic text-[#ae95b6] text-sm sm:text-base whitespace-nowrap flex-shrink-0">{row[2]}</div>
               </div>
             ))}
           </div>
