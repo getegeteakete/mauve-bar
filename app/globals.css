@@ -9,6 +9,7 @@ html, body {
   color: #ece1d8;
   -webkit-tap-highlight-color: transparent;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -19,6 +20,11 @@ body {
 
 * { box-sizing: border-box; }
 img, iframe { max-width: 100%; }
+
+/* Account for fixed header on anchor navigation */
+section[id] {
+  scroll-margin-top: 64px;
+}
 
 .font-display { font-family: 'Italiana', 'Cormorant Garamond', serif; letter-spacing: 0.04em; }
 .font-serif-l { font-family: 'Cormorant Garamond', 'EB Garamond', serif; }
@@ -286,6 +292,176 @@ img, iframe { max-width: 100%; }
   filter: blur(8px);
 }
 .scroll-top-btn:hover .scroll-top-glow { opacity: 1; }
+
+/* Site Navigation */
+.site-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  padding: env(safe-area-inset-top) 0 0 0;
+  transition: all 0.4s cubic-bezier(0.2, 0.6, 0.2, 1);
+  pointer-events: none;
+}
+.site-nav.scrolled {
+  background: rgba(13, 11, 13, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(174, 149, 182, 0.12);
+}
+.site-nav-inner {
+  pointer-events: auto;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 64px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 640px) {
+  .site-nav-inner { padding: 0 24px; }
+}
+
+.site-nav-brand {
+  font-size: 1.25rem;
+  letter-spacing: 0.25em;
+  color: #ae95b6;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+  text-shadow: 0 2px 12px rgba(13,11,13,0.8);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.site-nav.scrolled .site-nav-brand {
+  opacity: 1;
+}
+@media (min-width: 640px) {
+  .site-nav-brand { font-size: 1.5rem; letter-spacing: 0.3em; }
+}
+
+.site-nav-links {
+  display: none;
+  align-items: center;
+  gap: 32px;
+}
+@media (min-width: 768px) {
+  .site-nav-links { display: flex; }
+}
+.site-nav-link {
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  color: #c9b3d2;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+  position: relative;
+  text-shadow: 0 2px 12px rgba(13,11,13,0.8);
+  transition: color 0.3s ease;
+}
+.site-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: #ae95b6;
+  transition: width 0.35s ease, left 0.35s ease;
+}
+.site-nav-link:hover {
+  color: #f4eef5;
+}
+.site-nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.site-nav-burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(13, 11, 13, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(174, 149, 182, 0.25);
+  color: #ae95b6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0;
+}
+.site-nav-burger:hover {
+  border-color: rgba(174, 149, 182, 0.6);
+  color: #f4eef5;
+}
+@media (min-width: 768px) {
+  .site-nav-burger { display: none; }
+}
+
+/* Mobile drawer */
+.site-nav-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 49;
+  background: rgba(8, 6, 11, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.site-nav-drawer.open {
+  opacity: 1;
+  visibility: visible;
+}
+.site-nav-drawer-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 64px 24px;
+}
+
+.drawer-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #ece1d8;
+  cursor: pointer;
+  padding: 8px 24px;
+  text-decoration: none;
+  position: relative;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: color 0.3s ease;
+}
+.site-nav-drawer.open .drawer-link {
+  animation: drawerLinkIn 0.6s cubic-bezier(0.2, 0.6, 0.2, 1) forwards;
+}
+@keyframes drawerLinkIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+.drawer-link:hover { color: #ae95b6; }
+.drawer-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 1px;
+  background: rgba(174, 149, 182, 0.5);
+  transition: width 0.3s ease;
+}
+.drawer-link:hover::after { width: 50%; }
 
 /* Map embed frame */
 .map-frame {

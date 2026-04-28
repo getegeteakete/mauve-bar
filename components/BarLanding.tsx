@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import {
   MapPin, Calendar as CalendarIcon, Instagram, Lock, X, ChevronLeft, ChevronRight, ChevronUp,
-  LogIn, LogOut, Settings,
+  LogIn, LogOut, Settings, Menu as MenuIcon,
 } from 'lucide-react';
 import QRCode from 'qrcode';
 import { BarData, DEFAULT_DATA } from '@/lib/types';
@@ -65,6 +65,7 @@ export default function BarLanding() {
   });
   const [savedPin, setSavedPin] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
 
   // Fetch state from server
   const fetchState = useCallback(async () => {
@@ -103,6 +104,25 @@ export default function BarLanding() {
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  function scrollToSection(id: string) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    // Account for fixed header height
+    const headerHeight = 64;
+    const top = el.getBoundingClientRect().top + window.scrollY - headerHeight;
+    window.scrollTo({ top, behavior: 'smooth' });
+    setNavOpen(false);
+  }
+
+  // Lock body scroll when drawer is open
+  useEffect(() => {
+    if (navOpen) {
+      const original = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      return () => { document.body.style.overflow = original; };
+    }
+  }, [navOpen]);
 
   // Persist (PIN-protected)
   async function persist(next: BarData) {
@@ -298,8 +318,81 @@ export default function BarLanding() {
       <div className="grain" />
       <div className="vignette" />
 
+      {/* HEADER NAV */}
+      <header className={`site-nav ${scrolled ? 'scrolled' : ''}`}>
+        <div className="site-nav-inner">
+          <button
+            onClick={scrollToTop}
+            className="site-nav-brand font-display"
+            aria-label="トップへ"
+          >
+            MAUVE
+          </button>
+
+          {/* Desktop nav */}
+          <nav className="site-nav-links">
+            {[
+              { id: 'concept', label: 'CONCEPT' },
+              { id: 'menu', label: 'MENU' },
+              { id: 'calendar', label: 'CALENDAR' },
+              { id: 'info', label: 'INFO' },
+            ].map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="site-nav-link font-display"
+              >
+                {item.label}
+              </button>
+            ))}
+          </nav>
+
+          {/* Mobile hamburger */}
+          <button
+            onClick={() => setNavOpen(!navOpen)}
+            className="site-nav-burger"
+            aria-label={navOpen ? 'メニューを閉じる' : 'メニューを開く'}
+          >
+            {navOpen ? <X size={20} /> : <MenuIcon size={20} />}
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile drawer */}
+      <div className={`site-nav-drawer ${navOpen ? 'open' : ''}`}>
+        <div className="site-nav-drawer-inner">
+          {[
+            { id: 'concept', label: 'CONCEPT', jp: 'コンセプト' },
+            { id: 'menu', label: 'MENU', jp: 'メニュー' },
+            { id: 'calendar', label: 'CALENDAR', jp: '営業日' },
+            { id: 'info', label: 'INFO', jp: '店舗情報' },
+          ].map((item, i) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="drawer-link"
+              style={{ animationDelay: navOpen ? `${i * 80 + 100}ms` : '0ms' }}
+            >
+              <span className="font-display tracking-[0.4em] text-xl">{item.label}</span>
+              <span className="font-jp text-xs text-[#7a6184] tracking-[0.3em] mt-1">{item.jp}</span>
+            </button>
+          ))}
+          <a
+            href="https://www.instagram.com/mauve.317/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="drawer-link"
+            onClick={() => setNavOpen(false)}
+            style={{ animationDelay: navOpen ? '420ms' : '0ms' }}
+          >
+            <span className="font-display tracking-[0.4em] text-xl flex items-center gap-3"><Instagram size={18} /> INSTAGRAM</span>
+            <span className="font-jp text-xs text-[#7a6184] tracking-[0.3em] mt-1">@mauve.317</span>
+          </a>
+        </div>
+      </div>
+
       {/* HERO */}
-      <section className="relative min-h-screen flex flex-col overflow-hidden">
+      <section id="hero" className="relative min-h-screen flex flex-col overflow-hidden">
         {/* Background video */}
         <video
           className="hero-video"
@@ -318,7 +411,7 @@ export default function BarLanding() {
         <div className="ambient-glow" style={{ top: '-200px', left: '-200px' }} />
         <div className="ambient-glow" style={{ bottom: '-300px', right: '-200px', background: 'radial-gradient(circle, rgba(212,184,150,0.1) 0%, transparent 60%)' }} />
 
-        <div className="relative z-10 px-4 sm:px-6 pt-6 sm:pt-8 flex items-center justify-end gap-3 fade-up">
+        <div className="relative z-10 px-4 sm:px-6 pt-20 sm:pt-24 flex items-center justify-end gap-3 fade-up">
           <div className="lamp-frame">
             <span className={`lamp ${isOpen ? 'on' : ''}`} />
             <span className="font-jp text-[10px] sm:text-xs tracking-[0.25em] sm:tracking-[0.3em] text-[#ece1d8] whitespace-nowrap">
@@ -353,7 +446,7 @@ export default function BarLanding() {
       </section>
 
       {/* CONCEPT */}
-      <section className="relative z-10 px-4 sm:px-6 py-16 sm:py-24 max-w-5xl mx-auto">
+      <section id="concept" className="relative z-10 px-4 sm:px-6 py-16 sm:py-24 max-w-5xl mx-auto">
         <div className="divider-glyph mb-10 sm:mb-16">
           <span className="ornament-line max-w-[60px] sm:max-w-[80px]" />
           <span className="text-xl sm:text-2xl">✦</span>
@@ -385,7 +478,7 @@ export default function BarLanding() {
       </section>
 
       {/* MENU */}
-      <section className="relative z-10 px-4 sm:px-6 py-14 sm:py-20 max-w-3xl mx-auto">
+      <section id="menu" className="relative z-10 px-4 sm:px-6 py-14 sm:py-20 max-w-3xl mx-auto">
         <div className="divider-glyph mb-10 sm:mb-12">
           <span className="ornament-line max-w-[60px] sm:max-w-[80px]" />
           <span className="font-display text-xs sm:text-sm tracking-[0.4em]">MENU</span>
@@ -470,7 +563,7 @@ export default function BarLanding() {
       </section>
 
       {/* CALENDAR */}
-      <section className="relative z-10 px-4 sm:px-6 py-14 sm:py-20 max-w-3xl mx-auto">
+      <section id="calendar" className="relative z-10 px-4 sm:px-6 py-14 sm:py-20 max-w-3xl mx-auto">
         <div className="divider-glyph mb-10 sm:mb-12">
           <span className="ornament-line max-w-[60px] sm:max-w-[80px]" />
           <CalendarIcon size={16} className="text-[#7a6184]" />
@@ -543,7 +636,7 @@ export default function BarLanding() {
       </section>
 
       {/* INFO */}
-      <section className="relative z-10 px-4 sm:px-6 py-14 sm:py-20 max-w-3xl mx-auto">
+      <section id="info" className="relative z-10 px-4 sm:px-6 py-14 sm:py-20 max-w-3xl mx-auto">
         <div className="divider-glyph mb-10 sm:mb-12">
           <span className="ornament-line max-w-[60px] sm:max-w-[80px]" />
           <span className="font-display text-xs sm:text-sm tracking-[0.4em]">INFORMATION</span>
