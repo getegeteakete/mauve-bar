@@ -341,9 +341,6 @@ export default function BarLanding() {
           <div className="font-serif-l italic text-[#c9b3d2] text-[11px] sm:text-sm tracking-[0.25em] sm:tracking-[0.35em] mt-4 sm:mt-5 fade-up-4" style={{ textShadow: '0 2px 14px rgba(13,11,13,0.9)' }}>
             Good Vibes &amp; Cool Music
           </div>
-          <div className="font-jp text-[11px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] text-[#d4c0dc] mt-5 sm:mt-7 fade-up-5" style={{ textShadow: '0 2px 14px rgba(13,11,13,0.9)' }}>
-            好 き な も の に 囲 ま れ て
-          </div>
         </div>
 
         <div className="relative z-10 pb-6 sm:pb-8 flex flex-col items-center scroll-hint">
@@ -373,7 +370,7 @@ export default function BarLanding() {
             { jp: '芸術', en: 'Art', desc: '感性を刺激する空間。額に飾られた一枚から、夜の対話が始まる。' },
             { jp: '装い', en: 'Fashion', desc: '装うことは、自分を語ること。装いに敬意を払う場所。' },
             { jp: '音楽', en: 'Music', desc: '深夜のジャズ、ソウル、ハウス。耳に馴染み、夜を流す音。' },
-            { jp: '愛', en: 'Love', desc: '好きなものを、好きと言える夜を。' },
+            { jp: '愛', en: 'Love', desc: 'すべての夜に愛と感謝を。' },
           ].map((c, i) => (
             <div key={i} className="text-center">
               <div className="font-jp text-3xl sm:text-4xl md:text-5xl text-[#ae95b6] mb-2 sm:mb-3">{c.jp}</div>
