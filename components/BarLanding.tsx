@@ -399,12 +399,8 @@ export default function BarLanding() {
           <span className="ornament-line max-w-[60px] sm:max-w-[80px]" />
         </div>
 
-        <div className="text-center mb-8 sm:mb-10">
-          <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] sm:tracking-[0.5em] text-[#9d85a6]">DEEP MUSIC & LIQUOR</div>
-        </div>
-
         {/* Standard menu */}
-        <div className="space-y-1">
+        <div className="space-y-1 mt-2">
           {[
             ['Table Charge', '', '¥500'],
             ['Beer', '', '¥600'],
