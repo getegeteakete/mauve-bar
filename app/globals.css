@@ -88,7 +88,7 @@ img, iframe { max-width: 100%; }
   font-family: 'Italiana', serif;
   font-size: clamp(4rem, 18vw, 14rem);
   line-height: 0.9;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.05em;
   background: linear-gradient(180deg, #f0d8e0 0%, #c8a2b8 45%, #6a4858 100%);
   -webkit-background-clip: text;
   background-clip: text;

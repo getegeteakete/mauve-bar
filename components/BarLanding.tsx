@@ -296,7 +296,7 @@ export default function BarLanding() {
           <div className="font-serif-l italic text-[#a78695] text-xs sm:text-sm tracking-[0.3em] sm:tracking-[0.4em] mb-4 sm:mb-6 fade-up-2 px-2">
             — a quiet bar for solitary nights —
           </div>
-          <h1 className="hero-title fade-up-3">mauve</h1>
+          <h1 className="hero-title fade-up-3">MAUVE</h1>
           <div className="font-jp text-xs sm:text-sm tracking-[0.4em] sm:tracking-[0.5em] text-[#c8a2b8] mt-5 sm:mt-6 fade-up-4">
             深 夜 の 音 律 と 一 杯
           </div>
@@ -518,7 +518,7 @@ export default function BarLanding() {
       {/* FOOTER */}
       <footer className="relative z-10 px-4 sm:px-6 py-12 sm:py-16 border-t border-[#2a1f25]">
         <div className="max-w-3xl mx-auto flex flex-col items-center text-center gap-5 sm:gap-6">
-          <div className="font-display text-2xl sm:text-3xl tracking-[0.25em] sm:tracking-[0.3em] text-[#c8a2b8]">mauve</div>
+          <div className="font-display text-2xl sm:text-3xl tracking-[0.25em] sm:tracking-[0.3em] text-[#c8a2b8]">MAUVE</div>
           <div className="font-jp text-[11px] sm:text-xs text-[#8a6a78] tracking-[0.25em] sm:tracking-[0.3em]">
             ひとりの夜に、寄り添う場所を。
           </div>
