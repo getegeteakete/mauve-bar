@@ -318,8 +318,7 @@ export default function BarLanding() {
         <div className="ambient-glow" style={{ top: '-200px', left: '-200px' }} />
         <div className="ambient-glow" style={{ bottom: '-300px', right: '-200px', background: 'radial-gradient(circle, rgba(212,184,150,0.1) 0%, transparent 60%)' }} />
 
-        <div className="relative z-10 px-4 sm:px-6 pt-6 sm:pt-8 flex items-center justify-between gap-3 fade-up">
-          <div className="font-display text-base sm:text-xl tracking-[0.25em] sm:tracking-[0.3em] text-[#ae95b6] whitespace-nowrap" style={{ textShadow: '0 2px 12px rgba(13,11,13,0.8)' }}>M · 317</div>
+        <div className="relative z-10 px-4 sm:px-6 pt-6 sm:pt-8 flex items-center justify-end gap-3 fade-up">
           <div className="lamp-frame">
             <span className={`lamp ${isOpen ? 'on' : ''}`} />
             <span className="font-jp text-[10px] sm:text-xs tracking-[0.25em] sm:tracking-[0.3em] text-[#ece1d8] whitespace-nowrap">
