@@ -31,7 +31,7 @@ export const DEFAULT_DATA: BarData = {
     nearestStation: '〒810-0023 / 西鉄薬院駅・天神駅より徒歩圏',
     phone: '080-3940-8155',
     hours: '21:00 — 26:00',
-    cover: '¥1,000',
+    cover: '¥500 (Table Charge)',
     defaultClosed: [0], // 0=Sun のみ定休
     radius: 80, // ビル2Fなので少し狭めに
   },

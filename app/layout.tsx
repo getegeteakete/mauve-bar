@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'mauve — a quiet bar',
-  description: '深夜、ひとりの音と酒。a quiet bar for solitary nights.',
+  title: 'MAUVE — Deep Music & Liquor',
+  description: '深夜、ひとりの音と酒。Deep Music & Liquor — a quiet bar for solitary nights.',
   applicationName: 'mauve',
   appleWebApp: {
     capable: true,

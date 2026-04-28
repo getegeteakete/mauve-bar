@@ -2,9 +2,9 @@ import type { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'mauve — a quiet bar',
-    short_name: 'mauve',
-    description: '深夜、ひとりの音と酒。',
+    name: 'MAUVE — Deep Music & Liquor',
+    short_name: 'MAUVE',
+    description: 'Deep Music & Liquor — 深夜、ひとりの音と酒。',
     start_url: '/',
     display: 'standalone',
     orientation: 'portrait',

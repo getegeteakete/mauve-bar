@@ -364,29 +364,88 @@ export default function BarLanding() {
       <section className="relative z-10 px-4 sm:px-6 py-14 sm:py-20 max-w-3xl mx-auto">
         <div className="divider-glyph mb-10 sm:mb-12">
           <span className="ornament-line max-w-[60px] sm:max-w-[80px]" />
-          <span className="font-display text-xs sm:text-sm tracking-[0.4em]">SELECTION</span>
+          <span className="font-display text-xs sm:text-sm tracking-[0.4em]">MENU</span>
           <span className="ornament-line max-w-[60px] sm:max-w-[80px]" />
         </div>
 
+        <div className="text-center mb-8 sm:mb-10">
+          <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] sm:tracking-[0.5em] text-[#9d85a6]">DEEP MUSIC & LIQUOR</div>
+        </div>
+
+        {/* Standard menu */}
         <div className="space-y-1">
           {[
-            ['Old Fashioned', 'バーボン、ビターズ、オレンジ', '¥1,400'],
-            ['Negroni Sbagliato', 'カンパリ、スパークリング、ベルモット', '¥1,500'],
-            ['Single Malt — house pour', '日替わりのモルトを一杯', '¥1,600〜'],
-            ['Mauve Spritz', 'バイオレット、グレープフルーツ、トニック', '¥1,500'],
-            ['Espresso & Bourbon', '深夜の二杯目に', '¥1,300'],
+            ['Table Charge', '', '¥500'],
+            ['Beer', '', '¥600'],
+            ['High Ball', '', '¥700'],
+            ['Gin Tonic', '', '¥700'],
+            ['Gin Ricky', '', '¥700'],
+            ['Vodka Tonic', '', '¥700'],
+            ['Vodka Soda', '', '¥700'],
+            ['Cocktails', '', '¥700'],
+            ['Wine (Glass)', '', '¥800'],
+            ['Soft Drink', '', '¥500'],
           ].map((row, i) => (
             <div key={i} className="menu-row">
               <div className="min-w-0 flex-shrink">
                 <div className="font-serif-l text-base sm:text-lg text-[#ece1d8] leading-tight">{row[0]}</div>
-                <div className="font-jp text-[11px] sm:text-xs text-[#7a6184] mt-1 tracking-wider leading-snug">{row[1]}</div>
+                {row[1] && (
+                  <div className="font-jp text-[11px] sm:text-xs text-[#7a6184] mt-1 tracking-wider leading-snug">{row[1]}</div>
+                )}
               </div>
-              <div className="leader hidden sm:block" />
+              <div className="leader" />
               <div className="font-serif-l italic text-[#ae95b6] text-sm sm:text-base whitespace-nowrap flex-shrink-0">{row[2]}</div>
             </div>
           ))}
         </div>
-        <div className="text-center mt-8 sm:mt-10">
+
+        {/* Special Others */}
+        <div className="mt-12 sm:mt-16">
+          <div className="font-display text-xs sm:text-sm tracking-[0.4em] text-[#ae95b6] mb-5 sm:mb-6 text-center sm:text-left">
+            SPECIAL OTHERS
+          </div>
+          <div className="space-y-1">
+            {[
+              ['Burbon', '', ''],
+              ['Whiskey', '— Scotch · Irish · Islay', ''],
+              ['Rum', '', ''],
+              ['Gin', '', ''],
+              ['Vodka', '', ''],
+              ['Liqueur', '', ''],
+              ['Wine (Bottle)', '', '¥5,000'],
+              ['Champagne', '', '¥8,800'],
+            ].map((row, i) => (
+              <div key={i} className="menu-row">
+                <div className="min-w-0 flex-shrink">
+                  <div className="font-serif-l text-base sm:text-lg text-[#ece1d8] leading-tight">{row[0]}</div>
+                  {row[1] && (
+                    <div className="font-jp text-[11px] sm:text-xs text-[#7a6184] mt-1 tracking-wider leading-snug">{row[1]}</div>
+                  )}
+                </div>
+                <div className="leader" />
+                <div className="font-serif-l italic text-[#ae95b6] text-sm sm:text-base whitespace-nowrap flex-shrink-0">
+                  {row[2] || <span className="text-[#5e4569] text-xs">ASK</span>}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Seating */}
+        <div className="mt-12 sm:mt-14 pt-8 sm:pt-10 border-t border-[#2b242d]">
+          <div className="grid grid-cols-2 gap-6 sm:gap-10 text-center">
+            <div>
+              <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#9d85a6] mb-2">COUNTER</div>
+              <div className="font-serif-l text-2xl sm:text-3xl text-[#ece1d8]">7 <span className="text-sm sm:text-base text-[#9d85a6] italic">seats</span></div>
+            </div>
+            <div>
+              <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#9d85a6] mb-2">TABLE</div>
+              <div className="font-serif-l text-2xl sm:text-3xl text-[#ece1d8]">4 <span className="text-sm sm:text-base text-[#9d85a6] italic">seats</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center mt-10 sm:mt-12">
           <div className="font-jp text-[11px] sm:text-xs text-[#7a6184] tracking-[0.3em]">— more on the night —</div>
         </div>
       </section>
