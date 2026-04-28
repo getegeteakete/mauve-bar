@@ -234,22 +234,15 @@ export default function BarLanding() {
   }
 
   // Computed open status
-  const todayKey = fmtDate(now.getFullYear(), now.getMonth(), now.getDate());
-  const realDow = now.getDay();
-  const calOverride = data.calendar[todayKey];
-  const isDefaultClosed = data.config.defaultClosed.includes(realDow);
-  const calendarSaysOpen =
-    calOverride === 'open' || calOverride === 'special'
-      ? true
-      : calOverride === 'closed'
-      ? false
-      : !isDefaultClosed;
+  // 「店主がいる限り営業中を表示」のため、status.isOpen が真であれば
+  // カレンダーや定休日に関係なく営業中を表示する。
+  // 手動オーバーライドが最優先、次に店主の在店状態。
   const isOpen =
     data.status.manualOverride === 'open'
       ? true
       : data.status.manualOverride === 'closed'
       ? false
-      : data.status.isOpen && calendarSaysOpen;
+      : data.status.isOpen;
 
   // Calendar grid
   const monthDays = (() => {
@@ -468,7 +461,8 @@ export default function BarLanding() {
           <div>
             <div className="font-display text-xs tracking-[0.4em] text-[#8a6a78] mb-3">HOURS</div>
             <div className="text-[#ece1d8] text-base tracking-wider">{data.config.hours}</div>
-            <div className="text-[#8a6a78] text-xs mt-2">L.O. 30分前 · 定休 月曜・日曜</div>
+            <div className="text-[#8a6a78] text-xs mt-2">L.O. 30分前 · 定休 日曜</div>
+            <div className="text-[#8a6a78] text-xs mt-1">店主在店中は時間外も灯が点ることがあります</div>
           </div>
           <div>
             <div className="font-display text-xs tracking-[0.4em] text-[#8a6a78] mb-3">CHARGE</div>
@@ -479,13 +473,45 @@ export default function BarLanding() {
             <div className="font-display text-xs tracking-[0.4em] text-[#8a6a78] mb-3">ADDRESS</div>
             <div className="text-[#ece1d8] tracking-wider">{data.config.address}</div>
             <div className="text-[#8a6a78] text-xs mt-2">{data.config.nearestStation}</div>
+            {data.config.locationLat != null && data.config.locationLng != null && (
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${data.config.locationLat},${data.config.locationLng}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-3 text-[#c8a2b8] hover:text-[#f0d8e0] transition text-xs font-display tracking-[0.3em] border-b border-[#c8a2b8]/40 hover:border-[#c8a2b8] pb-0.5"
+              >
+                OPEN IN MAPS →
+              </a>
+            )}
           </div>
           <div>
             <div className="font-display text-xs tracking-[0.4em] text-[#8a6a78] mb-3">CONTACT</div>
-            <div className="text-[#ece1d8] tracking-wider">{data.config.phone}</div>
+            <a
+              href={`tel:${data.config.phone.replace(/[^0-9+]/g, '')}`}
+              className="text-[#ece1d8] tracking-wider hover:text-[#c8a2b8] transition"
+            >
+              {data.config.phone}
+            </a>
             <div className="text-[#8a6a78] text-xs mt-2">予約不要 · ご来店優先</div>
           </div>
         </div>
+
+        {/* MAP EMBED */}
+        {data.config.locationLat != null && data.config.locationLng != null && (
+          <div className="mt-12">
+            <div className="map-frame">
+              <iframe
+                title="MAUVE 所在地"
+                src={`https://maps.google.com/maps?q=${data.config.locationLat},${data.config.locationLng}&hl=ja&z=17&output=embed`}
+                width="100%"
+                height="320"
+                style={{ border: 0, filter: 'grayscale(0.4) contrast(1.1) brightness(0.85)' }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
+        )}
       </section>
 
       {/* FOOTER */}

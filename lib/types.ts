@@ -25,15 +25,15 @@ export type BarData = {
 
 export const DEFAULT_DATA: BarData = {
   config: {
-    locationLat: null,
-    locationLng: null,
-    address: '— ',
-    nearestStation: '— ',
-    phone: '— ',
-    hours: '19:00 — 02:00',
+    locationLat: 33.5844987,
+    locationLng: 130.3911537,
+    address: '福岡市中央区警固2-15-23 2F',
+    nearestStation: '〒810-0023 / 西鉄薬院駅・天神駅より徒歩圏',
+    phone: '080-3940-8155',
+    hours: '21:00 — 26:00',
     cover: '¥1,000',
-    defaultClosed: [0, 1],
-    radius: 150,
+    defaultClosed: [0], // 0=Sun のみ定休
+    radius: 80, // ビル2Fなので少し狭めに
   },
   status: {
     isOpen: false,
