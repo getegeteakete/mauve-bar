@@ -323,7 +323,16 @@ export default function BarLanding() {
           <div className="lamp-frame">
             <span className={`lamp ${isOpen ? 'on' : ''}`} />
             <span className="font-jp text-[10px] sm:text-xs tracking-[0.25em] sm:tracking-[0.3em] text-[#ece1d8] whitespace-nowrap">
-              {isOpen ? '営 業 中' : '本 日 休 業'}
+              {(() => {
+                if (isOpen) return '営 業 中';
+                // 営業日: 月(1)〜土(6)。日曜は定休
+                const dow = now.getDay();
+                const hour = now.getHours();
+                const isBusinessDay = dow >= 1 && dow <= 6;
+                // 営業日で開店前(0:00〜21:00)はOPEN予告を出す
+                if (isBusinessDay && hour < 21) return '本日 21:00 OPEN';
+                return '本 日 休 業';
+              })()}
             </span>
           </div>
         </div>
