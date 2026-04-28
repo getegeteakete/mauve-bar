@@ -341,15 +341,6 @@ export default function BarLanding() {
             — a quiet bar for solitary nights —
           </div>
           <h1 className="hero-title fade-up-3">MAUVE</h1>
-          <div className="font-jp text-xs sm:text-sm tracking-[0.4em] sm:tracking-[0.5em] text-[#d4c0dc] mt-5 sm:mt-6 fade-up-4" style={{ textShadow: '0 2px 16px rgba(13,11,13,0.9)' }}>
-            深 夜 の 音 律 と 一 杯
-          </div>
-          <div className="mt-10 sm:mt-12 max-w-md fade-up-5">
-            <p className="font-jp text-xs sm:text-sm leading-loose text-[#c0b0c8]" style={{ textShadow: '0 2px 14px rgba(13,11,13,0.9)' }}>
-              扉の向こうに、ひとりの夜。<br/>
-              誰にも気を遣わず、自分のための音と酒を。
-            </p>
-          </div>
         </div>
 
         <div className="relative z-10 pb-6 sm:pb-8 flex flex-col items-center scroll-hint">
