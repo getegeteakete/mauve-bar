@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import {
-  MapPin, Calendar as CalendarIcon, Instagram, Lock, X, ChevronLeft, ChevronRight,
+  MapPin, Calendar as CalendarIcon, Instagram, Lock, X, ChevronLeft, ChevronRight, ChevronUp,
   LogIn, LogOut, Settings,
 } from 'lucide-react';
 import { BarData, DEFAULT_DATA } from '@/lib/types';
@@ -43,6 +43,7 @@ export default function BarLanding() {
     return { y: d.getFullYear(), m: d.getMonth() };
   });
   const [savedPin, setSavedPin] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
 
   // Fetch state from server
   const fetchState = useCallback(async () => {
@@ -67,12 +68,20 @@ export default function BarLanding() {
     // 画面再表示時に再取得（PWA・タブ切替対策）
     const onVis = () => { if (!document.hidden) fetchState(); };
     document.addEventListener('visibilitychange', onVis);
+    // スクロール検知
+    const onScroll = () => setScrolled(window.scrollY > 400);
+    window.addEventListener('scroll', onScroll, { passive: true });
     return () => {
       clearInterval(poll);
       clearInterval(tick);
       document.removeEventListener('visibilitychange', onVis);
+      window.removeEventListener('scroll', onScroll);
     };
   }, [fetchState]);
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   // Persist (PIN-protected)
   async function persist(next: BarData) {
@@ -508,6 +517,21 @@ export default function BarLanding() {
           </div>
         </div>
       </footer>
+
+      {/* SCROLL TO TOP */}
+      <button
+        onClick={scrollToTop}
+        aria-label="ページ上部へ"
+        className={`fixed bottom-6 right-6 z-40 transition-all duration-500 ${
+          scrolled ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3 pointer-events-none'
+        }`}
+      >
+        <span className="scroll-top-btn group">
+          <span className="scroll-top-glow" />
+          <ChevronUp size={18} className="relative z-10 transition-transform group-hover:-translate-y-0.5" />
+          <span className="font-display text-[9px] tracking-[0.3em] mt-0.5 relative z-10">TOP</span>
+        </span>
+      </button>
 
       {/* ADMIN */}
       {adminOpen && (
