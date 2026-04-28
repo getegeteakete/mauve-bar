@@ -282,75 +282,75 @@ export default function BarLanding() {
         <div className="ambient-glow" style={{ top: '-200px', left: '-200px' }} />
         <div className="ambient-glow" style={{ bottom: '-300px', right: '-200px', background: 'radial-gradient(circle, rgba(212,184,150,0.1) 0%, transparent 60%)' }} />
 
-        <div className="relative z-10 px-6 pt-8 flex items-center justify-between fade-up">
-          <div className="font-display text-xl tracking-[0.3em] text-[#c8a2b8]">M · 317</div>
+        <div className="relative z-10 px-4 sm:px-6 pt-6 sm:pt-8 flex items-center justify-between gap-3 fade-up">
+          <div className="font-display text-base sm:text-xl tracking-[0.25em] sm:tracking-[0.3em] text-[#c8a2b8] whitespace-nowrap">M · 317</div>
           <div className="lamp-frame">
             <span className={`lamp ${isOpen ? 'on' : ''}`} />
-            <span className="font-jp text-xs tracking-[0.3em] text-[#ece1d8]">
+            <span className="font-jp text-[10px] sm:text-xs tracking-[0.25em] sm:tracking-[0.3em] text-[#ece1d8] whitespace-nowrap">
               {isOpen ? '営 業 中' : '本 日 休 業'}
             </span>
           </div>
         </div>
 
-        <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 text-center">
-          <div className="font-serif-l italic text-[#a78695] text-sm tracking-[0.4em] mb-6 fade-up-2">
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-6 text-center py-12">
+          <div className="font-serif-l italic text-[#a78695] text-xs sm:text-sm tracking-[0.3em] sm:tracking-[0.4em] mb-4 sm:mb-6 fade-up-2 px-2">
             — a quiet bar for solitary nights —
           </div>
           <h1 className="hero-title fade-up-3">mauve</h1>
-          <div className="font-jp text-sm tracking-[0.5em] text-[#c8a2b8] mt-6 fade-up-4">
+          <div className="font-jp text-xs sm:text-sm tracking-[0.4em] sm:tracking-[0.5em] text-[#c8a2b8] mt-5 sm:mt-6 fade-up-4">
             深 夜 の 音 律 と 一 杯
           </div>
-          <div className="mt-12 max-w-md fade-up-5">
-            <p className="font-jp text-sm leading-loose text-[#9b8a91]">
+          <div className="mt-10 sm:mt-12 max-w-md fade-up-5">
+            <p className="font-jp text-xs sm:text-sm leading-loose text-[#9b8a91]">
               扉の向こうに、ひとりの夜。<br/>
               誰にも気を遣わず、自分のための音と酒を。
             </p>
           </div>
         </div>
 
-        <div className="relative z-10 pb-8 flex flex-col items-center scroll-hint">
-          <div className="font-display text-xs tracking-[0.4em] text-[#8a6a78]">SCROLL</div>
-          <div className="w-px h-10 bg-gradient-to-b from-[#8a6a78] to-transparent mt-2" />
+        <div className="relative z-10 pb-6 sm:pb-8 flex flex-col items-center scroll-hint">
+          <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#8a6a78]">SCROLL</div>
+          <div className="w-px h-8 sm:h-10 bg-gradient-to-b from-[#8a6a78] to-transparent mt-2" />
         </div>
       </section>
 
       {/* CONCEPT */}
-      <section className="relative z-10 px-6 py-24 max-w-5xl mx-auto">
-        <div className="divider-glyph mb-16">
-          <span className="ornament-line max-w-[80px]" />
-          <span className="text-2xl">✦</span>
-          <span className="ornament-line max-w-[80px]" />
+      <section className="relative z-10 px-4 sm:px-6 py-16 sm:py-24 max-w-5xl mx-auto">
+        <div className="divider-glyph mb-10 sm:mb-16">
+          <span className="ornament-line max-w-[60px] sm:max-w-[80px]" />
+          <span className="text-xl sm:text-2xl">✦</span>
+          <span className="ornament-line max-w-[60px] sm:max-w-[80px]" />
         </div>
 
-        <div className="text-center mb-20">
-          <div className="font-display text-sm tracking-[0.5em] text-[#8a6a78] mb-4">CONCEPT</div>
-          <h2 className="font-jp text-2xl md:text-3xl tracking-[0.2em] text-[#ece1d8] leading-relaxed">
+        <div className="text-center mb-14 sm:mb-20">
+          <div className="font-display text-xs sm:text-sm tracking-[0.4em] sm:tracking-[0.5em] text-[#8a6a78] mb-3 sm:mb-4">CONCEPT</div>
+          <h2 className="font-jp text-xl sm:text-2xl md:text-3xl tracking-[0.15em] sm:tracking-[0.2em] text-[#ece1d8] leading-relaxed">
             ひとりで、深く。<br/>
-            <span className="font-serif-l italic text-[#c8a2b8]">In quiet company of music & spirits.</span>
+            <span className="font-serif-l italic text-[#c8a2b8] text-lg sm:text-2xl md:text-3xl">In quiet company of music & spirits.</span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-12 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 md:gap-8">
           {[
             { jp: '音', en: 'Sound', desc: 'ヴィンテージのジャズ、深夜のアンビエント。会話を遮らない、けれど確かに残る音。' },
             { jp: '酒', en: 'Spirits', desc: 'モルトウイスキー、クラシックカクテル、季節の一杯。バーテンダーと相談しながら一杯ずつ。' },
             { jp: '独', en: 'Solitude', desc: 'カウンターは八席。連れ立つ夜より、ひとりの夜に。静けさが似合う場所。' },
           ].map((c, i) => (
             <div key={i} className="text-center">
-              <div className="font-jp text-5xl text-[#c8a2b8] mb-3">{c.jp}</div>
-              <div className="font-display text-xs tracking-[0.4em] text-[#8a6a78] mb-4">{c.en}</div>
-              <p className="font-jp text-sm leading-loose text-[#9b8a91] max-w-[260px] mx-auto">{c.desc}</p>
+              <div className="font-jp text-4xl sm:text-5xl text-[#c8a2b8] mb-2 sm:mb-3">{c.jp}</div>
+              <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#8a6a78] mb-3 sm:mb-4">{c.en}</div>
+              <p className="font-jp text-xs sm:text-sm leading-loose text-[#9b8a91] max-w-[260px] mx-auto">{c.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* MENU */}
-      <section className="relative z-10 px-6 py-20 max-w-3xl mx-auto">
-        <div className="divider-glyph mb-12">
-          <span className="ornament-line max-w-[80px]" />
-          <span className="font-display text-sm tracking-[0.4em]">SELECTION</span>
-          <span className="ornament-line max-w-[80px]" />
+      <section className="relative z-10 px-4 sm:px-6 py-14 sm:py-20 max-w-3xl mx-auto">
+        <div className="divider-glyph mb-10 sm:mb-12">
+          <span className="ornament-line max-w-[60px] sm:max-w-[80px]" />
+          <span className="font-display text-xs sm:text-sm tracking-[0.4em]">SELECTION</span>
+          <span className="ornament-line max-w-[60px] sm:max-w-[80px]" />
         </div>
 
         <div className="space-y-1">
@@ -362,56 +362,56 @@ export default function BarLanding() {
             ['Espresso & Bourbon', '深夜の二杯目に', '¥1,300'],
           ].map((row, i) => (
             <div key={i} className="menu-row">
-              <div>
-                <div className="font-serif-l text-lg text-[#ece1d8]">{row[0]}</div>
-                <div className="font-jp text-xs text-[#8a6a78] mt-1 tracking-wider">{row[1]}</div>
+              <div className="min-w-0 flex-shrink">
+                <div className="font-serif-l text-base sm:text-lg text-[#ece1d8] leading-tight">{row[0]}</div>
+                <div className="font-jp text-[11px] sm:text-xs text-[#8a6a78] mt-1 tracking-wider leading-snug">{row[1]}</div>
               </div>
-              <div className="leader" />
-              <div className="font-serif-l italic text-[#c8a2b8]">{row[2]}</div>
+              <div className="leader hidden sm:block" />
+              <div className="font-serif-l italic text-[#c8a2b8] text-sm sm:text-base whitespace-nowrap flex-shrink-0">{row[2]}</div>
             </div>
           ))}
         </div>
-        <div className="text-center mt-10">
-          <div className="font-jp text-xs text-[#8a6a78] tracking-[0.3em]">— more on the night —</div>
+        <div className="text-center mt-8 sm:mt-10">
+          <div className="font-jp text-[11px] sm:text-xs text-[#8a6a78] tracking-[0.3em]">— more on the night —</div>
         </div>
       </section>
 
       {/* CALENDAR */}
-      <section className="relative z-10 px-6 py-20 max-w-3xl mx-auto">
-        <div className="divider-glyph mb-12">
-          <span className="ornament-line max-w-[80px]" />
+      <section className="relative z-10 px-4 sm:px-6 py-14 sm:py-20 max-w-3xl mx-auto">
+        <div className="divider-glyph mb-10 sm:mb-12">
+          <span className="ornament-line max-w-[60px] sm:max-w-[80px]" />
           <CalendarIcon size={16} className="text-[#8a6a78]" />
-          <span className="ornament-line max-w-[80px]" />
+          <span className="ornament-line max-w-[60px] sm:max-w-[80px]" />
         </div>
 
-        <div className="text-center mb-10">
-          <div className="font-display text-sm tracking-[0.5em] text-[#8a6a78] mb-3">CALENDAR</div>
-          <h2 className="font-jp text-2xl tracking-[0.2em] text-[#ece1d8]">営 業 日</h2>
+        <div className="text-center mb-8 sm:mb-10">
+          <div className="font-display text-xs sm:text-sm tracking-[0.4em] sm:tracking-[0.5em] text-[#8a6a78] mb-2 sm:mb-3">CALENDAR</div>
+          <h2 className="font-jp text-xl sm:text-2xl tracking-[0.2em] text-[#ece1d8]">営 業 日</h2>
         </div>
 
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between mb-5 sm:mb-6">
           <button
             onClick={() => {
               const d = new Date(calCursor.y, calCursor.m - 1, 1);
               setCalCursor({ y: d.getFullYear(), m: d.getMonth() });
             }}
-            className="text-[#8a6a78] hover:text-[#c8a2b8] transition"
+            className="text-[#8a6a78] hover:text-[#c8a2b8] transition p-2 -m-2"
             aria-label="前月"
           >
             <ChevronLeft size={20} />
           </button>
           <div className="text-center">
-            <div className="font-display text-2xl tracking-[0.2em] text-[#ece1d8]">
+            <div className="font-display text-xl sm:text-2xl tracking-[0.2em] text-[#ece1d8]">
               {calCursor.y} · {String(calCursor.m + 1).padStart(2, '0')}
             </div>
-            <div className="font-jp text-xs text-[#8a6a78] tracking-[0.4em] mt-1">{MONTH_LABELS[calCursor.m]}</div>
+            <div className="font-jp text-[10px] sm:text-xs text-[#8a6a78] tracking-[0.3em] sm:tracking-[0.4em] mt-1">{MONTH_LABELS[calCursor.m]}</div>
           </div>
           <button
             onClick={() => {
               const d = new Date(calCursor.y, calCursor.m + 1, 1);
               setCalCursor({ y: d.getFullYear(), m: d.getMonth() });
             }}
-            className="text-[#8a6a78] hover:text-[#c8a2b8] transition"
+            className="text-[#8a6a78] hover:text-[#c8a2b8] transition p-2 -m-2"
             aria-label="次月"
           >
             <ChevronRight size={20} />
@@ -420,7 +420,7 @@ export default function BarLanding() {
 
         <div className="grid grid-cols-7 mb-2">
           {WEEKDAYS.map((w, i) => (
-            <div key={w} className={`text-center font-jp text-xs tracking-[0.3em] py-2 ${i === 5 ? 'text-[#7d8aa8]' : i === 6 ? 'text-[#c87878]' : 'text-[#8a6a78]'}`}>
+            <div key={w} className={`text-center font-jp text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] py-2 ${i === 5 ? 'text-[#7d8aa8]' : i === 6 ? 'text-[#c87878]' : 'text-[#8a6a78]'}`}>
               {w}
             </div>
           ))}
@@ -442,7 +442,7 @@ export default function BarLanding() {
           })}
         </div>
 
-        <div className="flex flex-wrap justify-center gap-6 mt-8 font-jp text-xs text-[#9b8a91]">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-6 sm:mt-8 font-jp text-[11px] sm:text-xs text-[#9b8a91]">
           <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-[#c8a2b8]" /> 営業日</span>
           <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-[#2a2228]" /> 定休日</span>
           <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-[#d4b896] shadow-[0_0_6px_rgba(212,184,150,0.6)]" /> 特別営業</span>
@@ -450,62 +450,63 @@ export default function BarLanding() {
       </section>
 
       {/* INFO */}
-      <section className="relative z-10 px-6 py-20 max-w-3xl mx-auto">
-        <div className="divider-glyph mb-12">
-          <span className="ornament-line max-w-[80px]" />
-          <span className="font-display text-sm tracking-[0.4em]">INFORMATION</span>
-          <span className="ornament-line max-w-[80px]" />
+      <section className="relative z-10 px-4 sm:px-6 py-14 sm:py-20 max-w-3xl mx-auto">
+        <div className="divider-glyph mb-10 sm:mb-12">
+          <span className="ornament-line max-w-[60px] sm:max-w-[80px]" />
+          <span className="font-display text-xs sm:text-sm tracking-[0.4em]">INFORMATION</span>
+          <span className="ornament-line max-w-[60px] sm:max-w-[80px]" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10 font-jp text-sm">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 font-jp text-sm">
           <div>
-            <div className="font-display text-xs tracking-[0.4em] text-[#8a6a78] mb-3">HOURS</div>
+            <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#8a6a78] mb-2 sm:mb-3">HOURS</div>
             <div className="text-[#ece1d8] text-base tracking-wider">{data.config.hours}</div>
-            <div className="text-[#8a6a78] text-xs mt-2">L.O. 30分前 · 定休 日曜</div>
-            <div className="text-[#8a6a78] text-xs mt-1">店主在店中は時間外も灯が点ることがあります</div>
+            <div className="text-[#8a6a78] text-[11px] sm:text-xs mt-2">L.O. 30分前 · 定休 日曜</div>
+            <div className="text-[#8a6a78] text-[11px] sm:text-xs mt-1 leading-relaxed">店主在店中は時間外も灯が点ることがあります</div>
           </div>
           <div>
-            <div className="font-display text-xs tracking-[0.4em] text-[#8a6a78] mb-3">CHARGE</div>
+            <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#8a6a78] mb-2 sm:mb-3">CHARGE</div>
             <div className="text-[#ece1d8] text-base tracking-wider">{data.config.cover}</div>
-            <div className="text-[#8a6a78] text-xs mt-2">お通し付 · お一人様歓迎</div>
+            <div className="text-[#8a6a78] text-[11px] sm:text-xs mt-2">お通し付 · お一人様歓迎</div>
           </div>
           <div>
-            <div className="font-display text-xs tracking-[0.4em] text-[#8a6a78] mb-3">ADDRESS</div>
-            <div className="text-[#ece1d8] tracking-wider">{data.config.address}</div>
-            <div className="text-[#8a6a78] text-xs mt-2">{data.config.nearestStation}</div>
+            <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#8a6a78] mb-2 sm:mb-3">ADDRESS</div>
+            <div className="text-[#ece1d8] tracking-wider text-sm sm:text-base">{data.config.address}</div>
+            <div className="text-[#8a6a78] text-[11px] sm:text-xs mt-2 leading-relaxed">{data.config.nearestStation}</div>
             {data.config.locationLat != null && data.config.locationLng != null && (
               <a
                 href={`https://www.google.com/maps/search/?api=1&query=${data.config.locationLat},${data.config.locationLng}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-3 text-[#c8a2b8] hover:text-[#f0d8e0] transition text-xs font-display tracking-[0.3em] border-b border-[#c8a2b8]/40 hover:border-[#c8a2b8] pb-0.5"
+                className="inline-block mt-3 text-[#c8a2b8] hover:text-[#f0d8e0] transition text-[10px] sm:text-xs font-display tracking-[0.3em] border-b border-[#c8a2b8]/40 hover:border-[#c8a2b8] pb-0.5"
               >
                 OPEN IN MAPS →
               </a>
             )}
           </div>
           <div>
-            <div className="font-display text-xs tracking-[0.4em] text-[#8a6a78] mb-3">CONTACT</div>
+            <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#8a6a78] mb-2 sm:mb-3">CONTACT</div>
             <a
               href={`tel:${data.config.phone.replace(/[^0-9+]/g, '')}`}
-              className="text-[#ece1d8] tracking-wider hover:text-[#c8a2b8] transition"
+              className="text-[#ece1d8] tracking-wider hover:text-[#c8a2b8] transition text-sm sm:text-base"
             >
               {data.config.phone}
             </a>
-            <div className="text-[#8a6a78] text-xs mt-2">予約不要 · ご来店優先</div>
+            <div className="text-[#8a6a78] text-[11px] sm:text-xs mt-2">予約不要 · ご来店優先</div>
           </div>
         </div>
 
         {/* MAP EMBED */}
         {data.config.locationLat != null && data.config.locationLng != null && (
-          <div className="mt-12">
+          <div className="mt-10 sm:mt-12">
             <div className="map-frame">
               <iframe
                 title="MAUVE 所在地"
                 src={`https://maps.google.com/maps?q=${data.config.locationLat},${data.config.locationLng}&hl=ja&z=17&output=embed`}
                 width="100%"
-                height="320"
-                style={{ border: 0, filter: 'grayscale(0.4) contrast(1.1) brightness(0.85)' }}
+                height="280"
+                className="sm:h-[320px]"
+                style={{ border: 0, filter: 'grayscale(0.4) contrast(1.1) brightness(0.85)', display: 'block' }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
@@ -515,10 +516,10 @@ export default function BarLanding() {
       </section>
 
       {/* FOOTER */}
-      <footer className="relative z-10 px-6 py-16 border-t border-[#2a1f25]">
-        <div className="max-w-3xl mx-auto flex flex-col items-center text-center gap-6">
-          <div className="font-display text-3xl tracking-[0.3em] text-[#c8a2b8]">mauve</div>
-          <div className="font-jp text-xs text-[#8a6a78] tracking-[0.3em]">
+      <footer className="relative z-10 px-4 sm:px-6 py-12 sm:py-16 border-t border-[#2a1f25]">
+        <div className="max-w-3xl mx-auto flex flex-col items-center text-center gap-5 sm:gap-6">
+          <div className="font-display text-2xl sm:text-3xl tracking-[0.25em] sm:tracking-[0.3em] text-[#c8a2b8]">mauve</div>
+          <div className="font-jp text-[11px] sm:text-xs text-[#8a6a78] tracking-[0.25em] sm:tracking-[0.3em]">
             ひとりの夜に、寄り添う場所を。
           </div>
           <a
@@ -532,13 +533,13 @@ export default function BarLanding() {
           </a>
           <button
             onClick={() => setAdminOpen(true)}
-            className="mt-4 text-[#3a2f35] hover:text-[#8a6a78] transition text-xs flex items-center gap-1"
+            className="mt-3 sm:mt-4 text-[#3a2f35] hover:text-[#8a6a78] transition text-xs flex items-center gap-1"
             aria-label="店主メニュー"
           >
             <Settings size={12} />
             <span className="font-display tracking-[0.3em]">staff</span>
           </button>
-          <div className="font-display text-xs tracking-[0.4em] text-[#3a2f35] mt-4">
+          <div className="font-display text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] text-[#3a2f35] mt-3 sm:mt-4 px-4">
             © {now.getFullYear()} MAUVE · ALL NIGHTS RESERVED
           </div>
         </div>
@@ -548,7 +549,7 @@ export default function BarLanding() {
       <button
         onClick={scrollToTop}
         aria-label="ページ上部へ"
-        className={`fixed bottom-6 right-6 z-40 transition-all duration-500 ${
+        className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 transition-all duration-500 ${
           scrolled ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3 pointer-events-none'
         }`}
       >
