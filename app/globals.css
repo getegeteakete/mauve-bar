@@ -131,6 +131,24 @@ img, iframe { max-width: 100%; }
   filter: drop-shadow(0 2px 20px rgba(13,11,13,0.6));
 }
 
+/* Subtitle scales with viewport like the logo, constrained below logo width */
+.hero-subtitle {
+  /* Logo "MAUVE" is roughly 50vw wide on mobile (5 letters × 18vw × 0.55 width).
+     Subtitle has 23 chars so font-size ~ 50vw / 23 / 0.5 ≈ 4.3vw works.
+     Use clamp() so it has sensible bounds. */
+  font-size: clamp(0.7rem, 4vw, 1.5rem);
+  letter-spacing: 0.15em;
+  margin-top: 0.5rem;
+  white-space: nowrap;
+}
+@media (min-width: 640px) {
+  .hero-subtitle {
+    font-size: clamp(1rem, 3.5vw, 1.75rem);
+    letter-spacing: 0.2em;
+    margin-top: 0.75rem;
+  }
+}
+
 .fade-up { animation: fadeUp 1.2s cubic-bezier(0.2, 0.6, 0.2, 1) both; }
 .fade-up-2 { animation: fadeUp 1.2s 0.2s cubic-bezier(0.2, 0.6, 0.2, 1) both; }
 .fade-up-3 { animation: fadeUp 1.2s 0.4s cubic-bezier(0.2, 0.6, 0.2, 1) both; }
