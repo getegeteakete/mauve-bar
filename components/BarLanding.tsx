@@ -337,10 +337,13 @@ export default function BarLanding() {
         </div>
 
         <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-6 text-center py-12">
-          <div className="font-serif-l italic text-[#c9b3d2] text-xs sm:text-sm tracking-[0.3em] sm:tracking-[0.4em] mb-4 sm:mb-6 fade-up-2 px-2" style={{ textShadow: '0 2px 16px rgba(13,11,13,0.9)' }}>
-            — a quiet bar for solitary nights —
-          </div>
           <h1 className="hero-title fade-up-3">MAUVE</h1>
+          <div className="font-serif-l italic text-[#c9b3d2] text-[11px] sm:text-sm tracking-[0.25em] sm:tracking-[0.35em] mt-4 sm:mt-5 fade-up-4" style={{ textShadow: '0 2px 14px rgba(13,11,13,0.9)' }}>
+            Good Vibes &amp; Cool Music
+          </div>
+          <div className="font-jp text-[11px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] text-[#d4c0dc] mt-5 sm:mt-7 fade-up-5" style={{ textShadow: '0 2px 14px rgba(13,11,13,0.9)' }}>
+            好 き な も の に 囲 ま れ て
+          </div>
         </div>
 
         <div className="relative z-10 pb-6 sm:pb-8 flex flex-col items-center scroll-hint">
