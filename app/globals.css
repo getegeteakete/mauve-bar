@@ -138,14 +138,14 @@ img, iframe { max-width: 100%; }
      Use clamp() so it has sensible bounds. */
   font-size: clamp(0.7rem, 4vw, 1.5rem);
   letter-spacing: 0.15em;
-  margin-top: 0.5rem;
+  margin-top: -1rem;
   white-space: nowrap;
 }
 @media (min-width: 640px) {
   .hero-subtitle {
     font-size: clamp(1rem, 3.5vw, 1.75rem);
     letter-spacing: 0.2em;
-    margin-top: 0.75rem;
+    margin-top: -0.5rem;
   }
 }
 
