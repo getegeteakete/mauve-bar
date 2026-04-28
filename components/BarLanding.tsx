@@ -361,23 +361,34 @@ export default function BarLanding() {
         <div className="text-center mb-14 sm:mb-20">
           <div className="font-display text-xs sm:text-sm tracking-[0.4em] sm:tracking-[0.5em] text-[#7a6184] mb-3 sm:mb-4">CONCEPT</div>
           <h2 className="font-jp text-xl sm:text-2xl md:text-3xl tracking-[0.15em] sm:tracking-[0.2em] text-[#ece1d8] leading-relaxed">
-            ひとりで、深く。<br/>
-            <span className="font-serif-l italic text-[#ae95b6] text-lg sm:text-2xl md:text-3xl">In quiet company of music & spirits.</span>
+            <span className="font-serif-l italic text-[#ae95b6] text-2xl sm:text-3xl md:text-4xl block mb-3 sm:mb-4">Art · Fashion · Music & Love</span>
+            <span className="text-base sm:text-lg md:text-xl">好きなものに、囲まれて。</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 md:gap-6">
           {[
-            { jp: '音', en: 'Sound', desc: 'ヴィンテージのジャズ、深夜のアンビエント。会話を遮らない、けれど確かに残る音。' },
-            { jp: '酒', en: 'Spirits', desc: 'モルトウイスキー、クラシックカクテル、季節の一杯。バーテンダーと相談しながら一杯ずつ。' },
-            { jp: '独', en: 'Solitude', desc: 'カウンターは八席。連れ立つ夜より、ひとりの夜に。静けさが似合う場所。' },
+            { jp: '芸術', en: 'Art', desc: '感性を刺激する空間。額に飾られた一枚から、夜の対話が始まる。' },
+            { jp: '装い', en: 'Fashion', desc: '装うことは、自分を語ること。装いに敬意を払う場所。' },
+            { jp: '音楽', en: 'Music', desc: '深夜のジャズ、ソウル、ハウス。耳に馴染み、夜を流す音。' },
+            { jp: '愛', en: 'Love', desc: '好きなものを、好きと言える夜を。' },
           ].map((c, i) => (
             <div key={i} className="text-center">
-              <div className="font-jp text-4xl sm:text-5xl text-[#ae95b6] mb-2 sm:mb-3">{c.jp}</div>
+              <div className="font-jp text-3xl sm:text-4xl md:text-5xl text-[#ae95b6] mb-2 sm:mb-3">{c.jp}</div>
               <div className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#7a6184] mb-3 sm:mb-4">{c.en}</div>
-              <p className="font-jp text-xs sm:text-sm leading-loose text-[#9d8ea6] max-w-[260px] mx-auto">{c.desc}</p>
+              <p className="font-jp text-[11px] sm:text-xs leading-loose text-[#9d8ea6] max-w-[200px] mx-auto">{c.desc}</p>
             </div>
           ))}
+        </div>
+
+        {/* Smoking OK note */}
+        <div className="mt-14 sm:mt-20 text-center">
+          <div className="inline-flex items-center gap-3 px-5 py-3 border border-[#3a2c40] bg-[#1a121f]/40 backdrop-blur-sm">
+            <span className="font-display text-[10px] sm:text-xs tracking-[0.4em] text-[#7a6184]">SMOKING</span>
+            <span className="text-[#3a2c40]">·</span>
+            <span className="font-serif-l italic text-[#ae95b6] text-sm sm:text-base">welcome</span>
+          </div>
+          <div className="font-jp text-[11px] sm:text-xs text-[#7a6184] mt-3 tracking-wider">煙草を愉しめる夜の場所</div>
         </div>
       </section>
 
