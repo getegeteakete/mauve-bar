@@ -416,9 +416,14 @@ export default function BarLanding() {
         {/* Standard menu */}
         <div className="space-y-1">
           {[
+            ['Table Charge', '', '¥500'],
+            ['Beer', '', '¥600'],
+            ['Gin Tonic', '', '¥700'],
+            ['Vodka Soda', '', '¥700'],
             ['High Ball', '', '¥800'],
             ['Cocktail', '', '¥800'],
             ['Wine (Glass)', '', '¥1,000'],
+            ['Soft Drink', '', '¥500'],
           ].map((row, i) => (
             <div key={i} className="menu-row">
               <div className="min-w-0 flex-shrink">
