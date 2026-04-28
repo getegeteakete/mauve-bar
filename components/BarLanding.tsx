@@ -416,7 +416,7 @@ export default function BarLanding() {
         {/* Bottle selection */}
         <div className="mt-12 sm:mt-16">
           <div className="font-display text-xs sm:text-sm tracking-[0.4em] text-[#ae95b6] mb-5 sm:mb-6 text-center sm:text-left">
-            BOTTLE SELECTION
+            SPECIALS
           </div>
           <div className="space-y-1">
             {[
