@@ -663,9 +663,6 @@ export default function BarLanding() {
       <footer className="relative z-10 px-4 sm:px-6 py-12 sm:py-16 border-t border-[#2b242d]">
         <div className="max-w-3xl mx-auto flex flex-col items-center text-center gap-5 sm:gap-6">
           <div className="font-display text-2xl sm:text-3xl tracking-[0.25em] sm:tracking-[0.3em] text-[#ae95b6]">MAUVE</div>
-          <div className="font-jp text-[11px] sm:text-xs text-[#7a6184] tracking-[0.25em] sm:tracking-[0.3em]">
-            ひとりの夜に、寄り添う場所を。
-          </div>
           <a
             href="https://www.instagram.com/mauve.317/"
             target="_blank"
